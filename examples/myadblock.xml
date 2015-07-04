@@ -223,6 +223,7 @@
 
 	
 	<remove-excludes>
+		<remove-all>False</remove-all>
 		<action-type>
 			<remove>False</remove>
 			<comment>True</comment>
