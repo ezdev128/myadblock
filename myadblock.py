@@ -239,7 +239,6 @@ class MyAdblock(object):
 	configParsed = False
 	
 	def __init__(self):
-		
 		self.configParsed = False
 		if not os.path.exists(cacheDir):
 			os.mkdir(cacheDir)
@@ -247,18 +246,9 @@ class MyAdblock(object):
 			os.mkdir(wwwDir)
 
 
-	def __del__(self):
-		try:
-			pass
-#			self.wwwFile.close()
-		except:
-			pass
 
 	def initConfig(self):
 		xcfg = Config()
-		
-#		self.wwwFile = open(xcfg.app.output_file, "w")
-
 		confFilePath = os.path.join(etcDic, "myadblock.xml")
 
 		# parse xml file and get root node
@@ -348,7 +338,6 @@ class MyAdblock(object):
 		self.helpers.xcfg = xcfg
 
 	def run(self):
-
 		adblockContent = []
 		adc = adblockContent.append
 
