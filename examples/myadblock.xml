@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<config>
+	<app>
+		<debug>False</debug>
+		<verbose>False</verbose>
+		<output-file/>
+		<cache>
+			<enabled>True</enabled>
+		</cache>
+		<encoding>utf-8</encoding>
+		<get-timeout>5</get-timeout>
+		
+	</app>
+	
+	<subscriptions>
+		<enabled>True</enabled>
+		<subscription>
+			<enabled>True</enabled>
+			<mime-type></mime-type>
+			<name>EasyList</name>
+			<url>https://easylist-downloads.adblockplus.org/easylist.txt</url>
+		</subscription>
+		<subscription>
+			<enabled>True</enabled>
+			<mime-type>text/plain</mime-type>
+			<name>пользовательские фильтры AdBlock</name>
+			<url>https://data.getadblock.com/filters/adblock_custom.txt</url>
+		</subscription>
+		<subscription>
+			<enabled>True</enabled>
+			<mime-type>text/plain</mime-type>
+			<name>Русский и украинский</name>
+			<url>https://easylist-downloads.adblockplus.org/advblock.txt</url>
+		</subscription>
+
+		<subscription>
+			<enabled>False</enabled>
+			<mime-type>text/plain</mime-type>
+			<name>EasyPrivacy (конфиденциальность)</name>
+			<url>https://easylist-downloads.adblockplus.org/easyprivacy.txt</url>
+		</subscription>
+		<subscription>
+			<enabled>False</enabled>
+			<mime-type>text/plain</mime-type>
+			<name>Fanboy's Annoyances (удаляет отвлекающее содержимое в интернете)</name>
+			<url>https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt</url>
+		</subscription>
+		<subscription>
+			<enabled>False</enabled>
+			<mime-type>application/json</mime-type>
+			<name>Защита от вредоносных программ</name>
+			<url>https://data.getadblock.com/filters/domains.json</url>
+		</subscription>
+		<subscription>
+			<enabled>False</enabled>
+			<mime-type>text/plain</mime-type>
+			<name>Список антисоциальных фильтров (удаляет кнопки социальных средств массовой информации)</name>
+			<url>https://easylist-downloads.adblockplus.org/fanboy-social.txt</url>
+		</subscription>
+		<subscription>
+			<enabled>False</enabled>
+			<mime-type>text/plain</mime-type>
+			<name>Список удаления предупреждений AdBlock (удаляет сообщения об использовании AdBlock)</name>
+			<url>https://easylist-downloads.adblockplus.org/antiadblockfilters.txt</url>
+		</subscription>
+	</subscriptions>
+
+	<add-rules>
+		<title>Собственные фильтры из конфигурационного файла</title>
+		<enabled>True</enabled>
+		<rule>
+			<name>facebook</name>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					||connect.facebook.net$third-party
+					||facebook.com/plugins$third-party
+					||pixel.facebook.com
+					||api.facebook.com$domain=~facebook.com
+				]]>
+			</data>
+		</rule>
+		
+		<rule>
+			<name>yandex</name>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					||mc.yandex.ru
+					||clck.yandex.ru
+					||yandex.ru/clck
+					||yabs.yandex.ru
+					||yandex.ru/metrika
+					||yandex.st/swf/ad-sdk-module
+					||yandex.ru/webvisor
+					||yandex.st/share/share
+				]]>
+			</data>
+		</rule>
+
+		<rule>
+			<name>mail.ru</name>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					||mail.ru/adi
+					||mail.bg/mail/index/getads
+					||connect.mail.ru$third-party
+					||love.mail.ru
+					||top-fwz1.mail.ru
+					||rs.mail.ru
+					||bs.mail.ru
+					||stat.radar.imgsmail.ru
+					||r3.mail.ru
+				]]>
+			</data>
+		</rule>
+			
+		<rule>
+			<name>vk.com</name>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					||vk.com/widget$domain=~vk.com|~vk.ru|~vkontakte.ru
+					||vk.com/js$domain=~vk.com|~vk.ru|~vkontakte.ru
+					||vk.com/share$domain=~vk.com|~vk.ru|~vkontakte.ru
+				]]>
+			</data>
+		</rule>
+
+		<rule>
+			<name>ok.ru</name>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					! ok
+					||connect.ok.ru$third-party
+					||ok.ru/mapi$third-party
+				]]>
+			</data>
+		</rule>
+			
+		<rule>
+			<name>google</name>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					||clients.google.com
+					||clients?.google.com
+					||google.com/ads
+					||google.co.uk/ads
+					||google.com/adsense
+					||googlesyndication.com
+					||google.com/coop
+					||google.com/doubleclick
+					||google.com/uds/api/ads
+					||google.com^*/show_afs_ads
+					||googlecode.com/files/google_ads
+					||google.com/js/gweb/analytics
+					||googletagmanager.com
+					||google-analytics.com
+					||googleadservices.com
+					||googlesyndication.com
+					||google.com/gen_204
+					||google.com/generate_204
+					||apis.google.com/$domain=~google.com|~google.ru|~gmail.com|~youtube.com
+					||plus.google.com$domain=~google.com|~google.ru|~gmail.com|~youtube.com
+				]]>
+			</data>
+		</rule>
+
+		<rule>
+			<name>livejournal</name>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					||l-stat.livejournal.net
+				]]>
+			</data>
+		</rule>
+					
+		<rule>
+			<name>twitter.com</name>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					||platform.twitter.com/widgets$domain=~twitter.com
+					||cdn.api.twitter.com/1/urls/count
+				]]>
+			</data>
+		</rule>
+					
+		<rule>
+			<name>sberbank.ru</name>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					||counter.sberbank.ru
+				]]>
+			</data>
+		</rule>
+					
+		<rule>
+			<name>other</name>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					||yadro.ru
+					||hotjar.com
+					||addthis.com
+					||pagead.
+					||pagead?.
+					||doubleclick.net
+					||tns-counter.ru
+					||mradx.net
+					||scorecardresearch.com
+					||top100.ru
+					||relap.io
+				]]>
+			</data>
+		</rule>
+	</add-rules>
+
+	
+	<remove-excludes>
+		<action-type>
+			<remove>False</remove>
+			<comment>True</comment>
+			<comment-pattern>! -*- excluded -*- ! @@RULE@@</comment-pattern>
+		</action-type>
+		<starts-with>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					@@||vk.com
+					
+					@@||facebook.com/plugins/like
+					@@||facebook.com/plugins/likebox
+					@@||facebook.com/plugins/facepile
+					
+					@@||google.com/ads
+					@@||google.co.uk/ads
+					@@||google.com/adsense
+					@@||googlesyndication.com
+					@@||google.com/coop
+					@@||google.com/doubleclick
+					@@||google.com/uds/api/ads
+					@@||google.com^*/show_afs_ads
+					@@||googlecode.com/files/google_ads
+					@@||google.com/js/gweb/analytics
+					@@||googletagmanager.com
+					@@||google-analytics.com
+					
+					@@||yandex.ru/metrika
+					@@||yandex.st/swf/ad-sdk-module
+					@@||yandex.ru/webvisor
+					@@||yandex.st/share/share
+					
+					@@||mail.ru/adi
+					@@||mail.bg/mail/index/getads
+					
+					
+					@@||doubleclick.net
+					
+					@@||static.adzerk.net
+					
+				]]>
+			</data>
+		</starts-with>
+		
+		<exact-match>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+				]]>
+			</data>
+		</exact-match>
+
+		<find-any>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					adzerk
+					doubleclick.net
+				]]>
+			</data>
+		</find-any>
+	</remove-excludes>
+	
+</config>

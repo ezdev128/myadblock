@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<config>
+	<app>
+		<debug>False</debug>
+		<verbose>False</verbose>
+		<output-file/>
+		<cache>
+			<enabled>True</enabled>
+			<dir/>
+		</cache>
+		<encoding>utf-8</encoding>
+		<get-timeout>5</get-timeout>
+	</app>
+	
+	<subscriptions>
+		<enabled>False</enabled>
+		<subscription>
+			<enabled>False</enabled>
+			<mime-type/>
+			<name>name of subscription</name>
+			<url>http://subscription.url</url>
+		</subscription>
+	</subscriptions>
+
+	<add-rules>
+		<title>My permanent or corporative filters</title>
+		<enabled>False</enabled>
+		<rule>
+			<name>name of rule</name>
+			<enabled>False</enabled>
+			<data>
+				<![CDATA[
+					raw adblock rule
+				]]>
+			</data>
+		</rule>
+	</add-rules>
+
+	
+	<remove-excludes>
+		<remove-all>False</remove-all>
+		<action-type>
+			<remove>False</remove>
+			<comment>True</comment>
+			<comment-pattern>! -*- excluded -*- ! @@RULE@@</comment-pattern>
+		</action-type>
+		<starts-with>
+			<enabled>False</enabled>
+			<data>
+				<![CDATA[
+					raw adblock exclusion rule
+				]]>
+			</data>
+		</starts-with>
+		
+		<exact-match>
+			<enabled>False</enabled>
+			<data>
+				<![CDATA[
+					raw adblock exclusion rule
+				]]>
+			</data>
+		</exact-match>
+
+		<find-any>
+			<enabled>True</enabled>
+			<data>
+				<![CDATA[
+					any word in exclusion list
+				]]>
+			</data>
+		</find-any>
+	</remove-excludes>
+	
+</config>
